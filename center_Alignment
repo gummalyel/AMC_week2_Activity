@@ -1,0 +1,24 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView>
+      <Text style = {{textAlign: 'center'}}>Naruto Uzumaki</Text>
+      <View style={{alignItems: 'center'}}>
+       <Text style = {{textAlign: 'center'}}>7th Hokage</Text>
+       <Image source = {{uri: 'https://th.bing.com/th/id/R.d9bf921371569161d0678c0b95710a40?rik=T3mfaBoCcFRbBg&riu=http%3a%2f%2fimg4.wikia.nocookie.net%2f__cb20140523045537%2fnaruto%2fimages%2f3%2f36%2fNaruto_Uzumaki.png&ehk=5Vehh0lpTJ6hnEB9a3KgjYK9dKqrFIeaJ9jNhx1CNh8%3d&risl=&pid=ImgRaw&r=0',}} style = {{width: 200, height: 200}}/>
+      </View>
+      <TextInput style = {{
+        textAlign: 'center',
+        height: 40, 
+        borderColor: 'gray',
+        borderWidth: 1,
+      }}
+      defaultValue = "You can type in me"
+      /> 
+    </ScrollView>
+  );
+};
+
+export default App;
