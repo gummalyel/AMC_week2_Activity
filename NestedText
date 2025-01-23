@@ -1,0 +1,61 @@
+import React from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const BoldAndBeautiful = () => (
+  <SafeAreaProvider>
+    <SafeAreaView style = {styles.container}>
+      <Text style = {styles.baseText}>
+        Dellosa
+      <Text style = {styles.innerText}> Gamaliel Ivann</Text>
+      <h5> 
+      <Text style = {styles.iam}>I am </Text>
+      <Text style = {styles.student}>IT student</Text>
+      <Text style = {styles.iam}>. Im currently a </Text>
+      <Text style = {styles.student2}>3rd year college student</Text>
+      <Text style = {styles.iam}> studying at </Text>
+      <Text style = {styles.student3}>Global Reciprocal Colleges</Text>
+      <Text style = {styles.iam}>. Im one of the </Text>
+      <Text style = {styles.student}>programmers </Text>
+      <Text style = {styles.iam}>in our group and we are a 5-man team.</Text>
+      <Text style = {styles.iam}>. Im looking forward to work on our CAPSTONE project and eagerly to </Text>
+      <Text style = {styles.innerText}> LEARN AND STUDY HARD NO MATTER</Text>
+      </h5>
+    </Text>
+    </SafeAreaView>
+  </SafeAreaProvider>
+
+  
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  innerText: {
+    color: 'red',
+    textAlign: 'center'
+  },
+  iam: {
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  student: {
+    color: 'blue',
+    textAlign: 'center'
+  },
+  student2: {
+    color: 'green',
+    textAlign: 'center'
+  },
+  student3: {
+    color: 'orange',
+    textAlign: 'center'
+  },
+});
+
+export default BoldAndBeautiful;
