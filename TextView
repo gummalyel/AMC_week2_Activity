@@ -1,0 +1,44 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("Gamaliel Ivann H. Dellosa");
+  const bodyText = 'Im Gamaliel Ivann H. Dellosa, 22 years old as the time Im writing this paragraph. Im an aspiring IT specialist that one I will become one. My goal for this semister especially for our CAPSTONE is to learn more and more as the time goes on. I want to focus on Artificial Intelligence and enhance my skill on backend coding. I want to contribute more for our project for this semester than the last one. Thats it';
+
+  const onPressTitle = () => {
+    setTitleText("Gamaliel Ivann H. Dellosa");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style = {styles.container}>
+        <Text style = {styles.baseText}>
+          <Text style = {styles.titleText} onPress = {onPressTitle}>
+          {titleText}
+          {'\n'}
+          {'\n'}
+          </Text>
+          <Text numberOfLines = {5}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'Conchin',
+  },
+  titleText: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
+
+
+export default TextInANest;
